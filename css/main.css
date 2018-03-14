@@ -1,0 +1,554 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Digital tech';
+    src: url('../fonts/Digitaltech.woff2') format('woff2'),
+    url('../fonts/Digitaltech.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TimeBurner';
+    src: url('../fonts/TimeBurner-Bold.woff2') format('woff2'),
+    url('../fonts/TimeBurner-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TimeBurner';
+    src: url('../fonts/TimeBurner.woff2') format('woff2'),
+    url('../fonts/TimeBurner.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body * {
+    font-family: 'TimeBurner';
+    font-weight: normal;
+    font-style: normal;
+}
+.neoModal {
+    background-color: lightgray;
+    width: 90%;
+    height: 90%;
+    display: none;
+    z-index: 100;
+    position: relative;
+    overflow-y: scroll;
+}
+.close {
+    color: #FFF;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    cursor: pointer;
+    font-family: "Digital tech";
+}
+.neoCloseupWrapper {
+    background-color: #000;
+    height: 30%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.neoCloseupWrapper>div {
+    width: 100%;
+    text-align: center;
+}
+.neoCloseupWrapper h1 {
+    color: #FFF;
+    position: relative;
+    top: 10px;
+}
+.neoCloseupWrapper a {
+    color: #FFF;
+}
+.neoCloseup {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    height: 10vw;
+    width: 10vw;
+    border-color: #FFF;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    box-shadow: 0 0 128px #FFF;
+    background: #e3e3e3;
+}
+.neoInfo .danger {
+    font-family: 'Digital tech';
+    margin: 0;
+    padding: 5px 0;
+    background-color: lightgreen;
+    text-align: center;
+}
+.neoInfo .danger h2 {
+    font-family: "Digital tech";
+}
+.neoInfo .danger.hazardous {
+    background-color: red;
+}
+.cardholders {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card {
+    flex-grow: 1;
+    display: inline-flex;
+    margin: 1vw;
+    background-color: #000;
+    padding: 3vw 2vw;
+    color: white;
+    position: relative;
+}
+.card p {
+    position: relative;
+    top: -3vw;
+}
+.card h2 {
+    position: relative;
+    bottom: -3vw;
+}
+
+.wrapper {
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.birthdayWrapper {
+    text-align: center;
+    color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.orbitsWrapper {
+    display: none;
+}
+
+.orbits {
+    position: relative;
+    top: 50%;
+}
+
+/*Credit to https://codepen.io/Turqueso/pen/vAIBb for the beautiful sun and earth gradients*/
+.sun {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 30vw;
+    width: 30vw;
+    border-color: orange;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    box-shadow: 0 0 128px red;
+    background: yellow;
+}
+
+.earth {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    height: 10vw;
+    width: 10vw;
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    box-shadow: 0 0 128px blue;
+    background: lightblue;
+    cursor: pointer;
+}
+.warning-bubble {
+    position: absolute;
+    background: lightgray;
+    border-radius: .4em;
+    bottom: 5vw;
+    transform: translateY(-20px) translateX(-50%);
+    z-index: 1;
+    padding: 1vw;
+}
+.warning-bubble .close {
+    color: #000;
+}
+.warning-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: lightgray;
+    border-bottom: 0;
+    margin-left: -20px;
+    margin-bottom: -20px;
+}
+
+.orbitPosition {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 35vw;
+    height: 35vw;
+    transform: translateX(-50%) translateY(-50%);
+}
+.hazardous .neoLabel {
+    color: red;
+}
+.orbitPosition:hover .neoLabel{
+    color: #FFF;
+    cursor: pointer;
+}
+.hazardous .orbit {
+    border-color: red;
+}
+.orbitPosition:hover .orbit {
+    border-color: #FFF;
+    cursor: pointer;
+}
+.hazardous .neo {
+    background-color: red;
+}
+.orbitPosition:hover .neo {
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+.neoLabel {
+    position: absolute;
+    color: darkgray;
+    bottom: -2.3vw;
+    font-size: 1.2vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.orbit {
+    height: 100%;
+    width: 100%;
+    border: 1px darkgray solid;
+    border-radius: 100%;
+    -webkit-animation: spin-right 10s linear infinite;
+    animation: spin-right 10s linear infinite;
+}
+
+.neo {
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: darkgray;
+}
+
+@-webkit-keyframes spin-right {
+    100% {
+        -webkit-transform: rotate(360deg) translate(0);
+        -moz-transform: rotate(360deg) translate(0);
+        -ms-transform: rotate(360deg) translate(0);
+        -o-transform: rotate(360deg) translate(0);
+        transform: rotate(360deg) translate(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="wrapper">
+            <div class="birthdayWrapper">
+                <h1>What's lurking out there in the cold dark depths of Outer Space?</h1>
+                <p>When is your birthday?</p>
+                <select name="month" id="month">
+                    <option value="01">Jan</option>
+                    <option value="02">Feb</option>
+                    <option value="03">Mar</option>
+                    <option value="04">Apr</option>
+                    <option value="05">May</option>
+                    <option value="06">Jun</option>
+                    <option value="07">Jul</option>
+                    <option value="08">Aug</option>
+                    <option value="09">Sep</option>
+                    <option value="10">Oct</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dec</option>
+                </select>
+                <select name="day" id="day"></select>
+                <br><br>
+                <button>What's out there?</button>
+            </div>
+            <div class="orbitsWrapper">
+                <div class="sun">
+                    <div class="orbits">
+                    </div>
+                </div>
+                <div class="warning-bubble">
+                    <span class="close">X</span>
+                    <p class="warning-content"></p>
+                    <p>
+                        Learn more at <a href="http://www.planetary.org/">Planetary.org</a> and consider <a href="https://secure.planetary.org/site/SPageNavigator/supportprojects.html">Donating</a>
+                    </p>
+                </div>
+                <div class="earth">
+                </div>
+            </div>
+            <div class="neoModal">
+                <div class="neoCloseupWrapper"></div>
+                <div class="neoInfo"></div>
+                <span class="close">X</span>
+            </div>
+        </div>
+
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
